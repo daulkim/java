@@ -43,7 +43,7 @@ public class Exercise {
         /*
             java 7
         */
-        System.out.println("Print All Person with last name beginnig with C");
+        System.out.println("Print All Person with last name beginning with C");
         printConditionally(people, new Condition() {
             @Override
             public boolean test(Person person) {
@@ -56,9 +56,6 @@ public class Exercise {
         printConditionally(people, (Person person) -> person.getLastName().startsWith("C"));
     }
 
-    /*
-    for java 7
-     */
     private static void printConditionally(List<Person> people, Condition condition) {
         for (Person person : people) {
             if(condition.test(person)){
