@@ -1,6 +1,7 @@
 package io.study;
 
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class Exercise {
@@ -39,6 +40,7 @@ public class Exercise {
             java 8
         */
         printConditionallyWithPredicate(people, person -> true);
+        printConditionallyWithConsumer(people, person -> true, person -> System.out.println(person));
 
         // step 3: Create a method that prints all people that have last name beginning with C
         /*
@@ -55,6 +57,7 @@ public class Exercise {
             java 8
         */
         printConditionallyWithPredicate(people, person -> person.getLastName().startsWith("C"));
+        printConditionallyWithConsumer(people, person -> person.getLastName().startsWith("C"), person -> System.out.println(person));
     }
 
     private static void printConditionally(List<Person> people, Condition condition) {
@@ -70,6 +73,15 @@ public class Exercise {
         for (Person person : people) {
             if(predicate.test(person)){
                 System.out.println(person);
+            }
+        }
+    }
+
+    // Predicate -> boolean test() 가짐 -> 새로 만들필요X
+    private static void printConditionallyWithConsumer(List<Person> people, Predicate<Person> predicate, Consumer<Person> consumer) {
+        for (Person person : people) {
+            if(predicate.test(person)){
+                consumer.accept(person);
             }
         }
     }
