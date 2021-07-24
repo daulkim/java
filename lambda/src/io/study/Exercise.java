@@ -1,6 +1,7 @@
 package io.study;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class Exercise {
     public static void main(String[] args) {
@@ -37,7 +38,7 @@ public class Exercise {
         /*
             java 8
         */
-        printConditionally(people, (Person person) -> true);
+        printConditionallyWithPredicate(people, person -> true);
 
         // step 3: Create a method that prints all people that have last name beginning with C
         /*
@@ -53,12 +54,21 @@ public class Exercise {
         /*
             java 8
         */
-        printConditionally(people, (Person person) -> person.getLastName().startsWith("C"));
+        printConditionallyWithPredicate(people, person -> person.getLastName().startsWith("C"));
     }
 
     private static void printConditionally(List<Person> people, Condition condition) {
         for (Person person : people) {
             if(condition.test(person)){
+                System.out.println(person);
+            }
+        }
+    }
+
+    // Predicate -> boolean test() 가짐 -> 새로 만들필요X
+    private static void printConditionallyWithPredicate(List<Person> people, Predicate<Person> predicate) {
+        for (Person person : people) {
+            if(predicate.test(person)){
                 System.out.println(person);
             }
         }
