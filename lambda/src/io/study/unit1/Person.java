@@ -1,4 +1,4 @@
-package io.study;
+package io.study.unit1;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

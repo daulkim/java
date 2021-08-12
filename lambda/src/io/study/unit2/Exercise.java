@@ -1,4 +1,6 @@
-package io.study;
+package io.study.unit2;
+
+import io.study.unit1.Person;
 
 import java.util.*;
 import java.util.function.Consumer;

@@ -1,4 +1,4 @@
-package io.study;
+package io.study.unit2;
 
 public class ClosuresExample {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package io.study;
+package io.study.unit2;
 
 public class ThisReferenceExample {
 
-    public void doProcess(int i, Process p) {
+    public void doProcess(int i, io.study.unit2.Process p) {
         p.process(i);
     }
 

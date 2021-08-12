@@ -1,4 +1,4 @@
-package io.study;
+package io.study.unit1;
 
 public class TypeInferenceExample {
     public static void main(String[] args) {

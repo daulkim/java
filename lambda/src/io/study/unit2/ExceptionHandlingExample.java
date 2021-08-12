@@ -1,4 +1,4 @@
-package io.study;
+package io.study.unit2;
 
 import java.util.function.BiConsumer;
 
